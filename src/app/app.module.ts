@@ -11,6 +11,7 @@ import { ItemsComponent } from './components/items.component';
 import { CategoriesComponent } from './components/categories.component';
 import { DetailsComponent } from './components/details.component';
 import { FilmDetailComponent } from './components/film-detail.component';
+import { CharacterDetailComponent } from './components/character-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FilmDetailComponent } from './components/film-detail.component';
     ItemsComponent,
     CategoriesComponent,
     DetailsComponent,
-    FilmDetailComponent
+    FilmDetailComponent,
+    CharacterDetailComponent
   ],
   imports: [
     BrowserModule,    BrowserAnimationsModule,

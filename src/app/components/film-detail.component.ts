@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Films } from '../interface';
 import { StarWarsSvc } from '../starwars.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-film-detail',
@@ -10,16 +10,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FilmDetailComponent implements OnInit {
 
-  constructor(private starWarSvc: StarWarsSvc, private router: Router,
-  private activatedRoute: ActivatedRoute){}
+  constructor(private starWarSvc: StarWarsSvc, private activatedRoute: ActivatedRoute){}
     film: Films = null;
+    id: number;
+
   ngOnInit() {
-    const id = this.activatedRoute.snapshot.params.id;
+    this.id = this.activatedRoute.snapshot.params.id;
     const item = "Films";
-    
-    //cannot get image to work yet >> to f/u
-    const imgPath = "./assets/images/"+item+'/'+id+".png";
-   this.starWarSvc.getDetails(item,id)
+
+    this.starWarSvc.getDetails(item,this.id)
       .then(result =>{
           this.film = result;
       })

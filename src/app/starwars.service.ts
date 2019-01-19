@@ -47,10 +47,12 @@ export class StarWarsSvc{
     getDetails(item: string, id: number):Promise<any>
     {                    
         item = getParam(item);
+        console.log("Param for details: ", item);        
         const detailsURL = URL + item+"/"+id;
+        console.log("Details URL: ", detailsURL);
             return(
                     this.http.get(detailsURL)
-                        .toPromise()
+                        .toPromise()                        
                 )                
             }
     }

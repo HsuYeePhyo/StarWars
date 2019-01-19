@@ -1,5 +1,10 @@
 # StarWars
 
+Routes => approute.module
+Classes => interface
+Service => starwars.service.ts
+Images => assets >> images
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
 ## Development server
