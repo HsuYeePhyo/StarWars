@@ -24,24 +24,26 @@ export class CharacterDetailComponent implements OnInit {
     this.starWarSvc.getDetails(items,this.id)
       .then((result)=>{
         this.character = result; 
-        console.log(result);
-        this.getHomeWorld(result["homeworld"]);   
+
+        this.starWarSvc.getfromAPIurl(result["homeworld"])  
+        .then(result=>{
+          this.character.homeworld = result["name"];      
+        }) 
+        if(result.films != null){
+          this.character.films = this.starWarSvc.getFilmNames(result.films);
+        }
+        if(result.species !=null){
+          this.character.species = this.starWarSvc.getPeopleNames(result.species);
+        }
+        if(result.vehicles != null || result.vehicles != []){
+          this.character.vehicles = this.starWarSvc.getPeopleNames(result.vehicles);
+        }
+        if(result.starships != null || result.starships !=[]){
+          this.character.starships = this.starWarSvc.getPeopleNames(result.starships);
+        }
       })
       .catch(err=>{
         console.error("Character Details Error: ",err)
       })
   }
-
-  //get Planet name from url of API
-  getHomeWorld(url: string){  
-    this.http.get(url)
-      .toPromise()
-      .then(result=>{
-        this.character.homeworld = result["name"];      
-      })
-      .catch(err=>{
-        console.error("Get Home World Error: ", err);
-      })
-  }
-
 }

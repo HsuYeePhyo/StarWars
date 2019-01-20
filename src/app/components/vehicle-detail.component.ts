@@ -16,7 +16,6 @@ export class VehicleDetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute){}
 
     vehicle: Vehicles = null;
-    pilot: Array<string> = [];
     id: number;
 
   ngOnInit() {
@@ -25,28 +24,15 @@ const item = "Vehicles";
 this.starWarSvc.getDetails(item,this.id)
     .then(result=> {
         this.vehicle = result;
-        this.getPilot(this.vehicle.pilots);
-        console.log("Vehicle: ", this.vehicle);
-        console.log("Pilots: ", this.vehicle.pilots);
+        if(result.pilots != null || result.pilots !=[]){
+          this.vehicle.pilots=this.starWarSvc.getPeopleNames(result.pilots);
+        }
+        if(result.films != null || result.films != []){
+          this.vehicle.fimls = this.starWarSvc.getFilmNames(result.films);
+        }
     })
     .catch(err=> {
       console.error("Vehicles Error: ", err);
     })
   }
-
-  getPilot(p: Array<string>){
-    if (p != null || p != []){
-      p.forEach(item=>{
-        this.http.get(item)
-          .toPromise()
-          .then(result=>{
-            this.pilot.push(result["name"]);
-            console.log("pilot: ", this.pilot);
-          })
-      }) 
-      this.vehicle.pilots = this.pilot;       
-    }   
-    
-  }
-
 }

@@ -28,4 +28,28 @@
 
   <mat-card-content>Home World: 
       <span id ="content">{{character?.homeworld}}</span></mat-card-content>
+
+    <mat-card-content >Films:
+        <p id ="content" *ngFor= "let f of character?.films" class="tab">
+            {{f}}
+        </p>
+    </mat-card-content>  
+    
+    <mat-card-content >Species:
+        <p id ="content" *ngFor= "let s of character?.species" class="tab">
+            {{s}}
+        </p>
+    </mat-card-content>  
+
+    <mat-card-content >Vehicles:
+        <p id ="content" *ngFor= "let v of character?.vehicles" class="tab">
+            {{v}}
+        </p>
+    </mat-card-content> 
+
+    <mat-card-content >Starships:
+        <p id ="content" *ngFor= "let s of character?.starships" class="tab">
+            {{s}}
+        </p>
+    </mat-card-content> 
 </mat-card>

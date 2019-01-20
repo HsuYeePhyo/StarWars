@@ -1,0 +1,45 @@
+<mat-card class="card">
+
+    <img mat-card-image src="assets/images/species/{{id}}.jpg"> 
+  
+  <mat-card-title id="title">{{species?.name.toUpperCase()}}</mat-card-title>
+  
+  <mat-card-content>Classification: 
+      <span id ="content">{{species?.classification.toUpperCase()}}</span></mat-card-content>
+  
+      <mat-card-content>Designation: 
+          <span id ="content">{{species?.designation}}</span></mat-card-content>
+
+      <mat-card-content>Average Height: 
+        <span id ="content">{{species?.average_height}}</span></mat-card-content>
+
+      <mat-card-content>Skin Colors: 
+        <span id ="content">{{species?.skin_colors}}</span></mat-card-content>
+
+      <mat-card-content>Hair Colors: 
+        <span id ="content">{{species?.hair_colors}}</span></mat-card-content>
+
+      <mat-card-content>Eye Colors: 
+        <span id ="content">{{species?.eye_colors}}</span></mat-card-content>
+
+      <mat-card-content>Average Lifespan: 
+        <span id ="content">{{species?.average_lifespan}}</span></mat-card-content>
+
+      <mat-card-content>Home World: 
+        <span id ="content">{{species?.homeworld}}</span></mat-card-content>
+
+      <mat-card-content>Language: 
+        <span id ="content">{{species?.language}}</span></mat-card-content>
+
+      <mat-card-content >People:
+            <p id ="content" *ngFor= "let p of species?.people" class="tab">
+               {{p}}
+            </p>
+      </mat-card-content>
+
+      <mat-card-content >Films:
+          <p id ="content" *ngFor= "let f of species?.films" class="tab">
+             {{f}}
+          </p>
+            </mat-card-content>   
+</mat-card>

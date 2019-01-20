@@ -1,0 +1,42 @@
+<mat-card class="card">
+
+    <img mat-card-image src="assets/images/planets/{{id}}.jpg"> 
+  
+  <mat-card-title id="title">{{planet?.name.toUpperCase()}}</mat-card-title>
+  
+  <mat-card-content>Rotation Period: 
+      <span id ="content">{{planet?.rotation_period}}</span></mat-card-content>
+  
+  <mat-card-content>Orbital Period: 
+      <span id ="content">{{planet?.orbital_period}}</span></mat-card-content>
+  
+    <mat-card-content>Diameter: 
+      <span id ="content">{{planet?.diameter}}</span></mat-card-content>
+  
+    <mat-card-content>Climate: 
+      <span id ="content">{{planet?.climate}}</span></mat-card-content>
+  
+  <mat-card-content>Gravity:
+      <span id ="content">{{planet?.gravity}}</span> </mat-card-content>
+  
+  <mat-card-content>Terrain:
+    <span id ="content">{{planet?.terrain}}</span> </mat-card-content>
+
+  <mat-card-content>Surface Water:
+    <span id ="content">{{planet?.surface_water}}</span> </mat-card-content>
+
+  <mat-card-content>Populatition:
+    <span id ="content">{{planet?.population}}</span> </mat-card-content>
+  
+  <mat-card-content >Residents:
+    <p id ="content" *ngFor= "let r of planet?.residents" class="tab">
+       {{r}}
+    </p>
+      </mat-card-content>
+
+      <mat-card-content >Films:
+          <p id ="content" *ngFor= "let f of planet?.films" class="tab">
+             {{f}}
+          </p>
+            </mat-card-content>      
+  </mat-card>

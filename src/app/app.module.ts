@@ -12,6 +12,9 @@ import { CategoriesComponent } from './components/categories.component';
 import { VehicleDetailComponent } from './components/vehicle-detail.component';
 import { FilmDetailComponent } from './components/film-detail.component';
 import { CharacterDetailComponent } from './components/character-detail.component';
+import { SpeciesDetailComponent } from './components/species-detail.component';
+import { StarshipDetailComponent } from './components/starship-detail.component';
+import { PlanetDetailComponent } from './components/planet-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CharacterDetailComponent } from './components/character-detail.componen
     CategoriesComponent,
     VehicleDetailComponent,
     FilmDetailComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    SpeciesDetailComponent,
+    StarshipDetailComponent,
+    PlanetDetailComponent
   ],
   imports: [
     BrowserModule,    BrowserAnimationsModule,

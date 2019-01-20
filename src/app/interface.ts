@@ -14,6 +14,10 @@ export interface Characters{
     birth_year: string;
     gender: string;
     homeworld: string;
+    films: Array<string>;
+    species: Array<string>;
+    vehicles: Array<string>;
+    starships: Array<string>;
 }
 export interface Films{
     title: string;
@@ -22,6 +26,7 @@ export interface Films{
     director:string;
     producer: string;
     release_date: string;
+    characters: Array<string>;
 }
 export interface Species{
     name: string;
@@ -34,6 +39,8 @@ export interface Species{
     average_lifespan: number;
     homeworld: string;
     language: string;
+    people: Array<string>;
+    films: Array<string>;
 }
 export interface Planets{
     name: string;
@@ -45,6 +52,8 @@ export interface Planets{
     terrain: string;
     surface_water: number;
     population: number;
+    residents: Array<string>;
+    films: Array<string>;
 }
 export interface Vehicles{
     name: string;
@@ -59,6 +68,7 @@ export interface Vehicles{
     consumables: string;
     vehicle_class: string;
     pilots: Array<string>;
+    fimls:Array<string>;
 }
 export class Starships{
     name: string;
@@ -74,5 +84,6 @@ export class Starships{
     hyperdrive_rating: string;
     MGLT: string;
     starship_class: string;
-    pilots?: string;
+    pilots: Array<string>;
+    films: Array<string>;
 }

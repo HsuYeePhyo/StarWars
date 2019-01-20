@@ -18,4 +18,10 @@
 
   <mat-card-content>Release Date:
       <span id ="content">{{film?.release_date}}</span> </mat-card-content>
-</mat-card>
+
+<mat-card-content >Characters:
+        <p id ="content" *ngFor= "let c of film?.characters" class="tab">
+           {{c}}
+        </p>
+          </mat-card-content>   
+ </mat-card>

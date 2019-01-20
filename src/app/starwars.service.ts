@@ -55,5 +55,43 @@ export class StarWarsSvc{
                         .toPromise()                        
                 )                
             }
+    getfromAPIurl(link: string):Promise<any>
+    {
+        return(
+            this.http.get(link)
+            .toPromise()   
+        )                 
+    }
+
+    getFilmNames(film: Array<string>)
+        {
+            let films = [];        
+            film.forEach(item=>{
+                this.http.get(item)
+                .toPromise()
+                .then(result=>{
+                    films.push(result["title"]);
+                })
+                .catch(err=>{
+                    console.error("Film Names Error: ", err);
+                })
+            })
+            return films;
+    }
+    getPeopleNames(pilot: Array<string>)
+    {
+        let pilots = [];
+        pilot.forEach(item=>{
+            this.http.get(item)
+            .toPromise()
+            .then(result=>{
+                pilots.push(result["name"]);
+            })
+            .catch(err=>{
+                console.error("Pilot Names Error: ", err);
+            })
+        })
+        return pilots;
+    }
     }
 
