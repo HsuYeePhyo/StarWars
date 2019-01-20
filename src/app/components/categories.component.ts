@@ -11,8 +11,9 @@ import { categories } from '../starwars.service';
 export class CategoriesComponent implements OnInit {
 
   constructor(private router: Router) { }
-  visible ="hidden";
-  ngOnInit() {        
+  
+  route:string;
+  ngOnInit() {   
   }
   category =  categories;
   

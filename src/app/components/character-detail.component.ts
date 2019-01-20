@@ -16,6 +16,7 @@ export class CharacterDetailComponent implements OnInit {
   
   id: number;
   character: Characters = null;
+  show = 'hidden';
 
   ngOnInit() {
     this.id = this.activatedRoute.snapshot.params.id;
@@ -45,5 +46,8 @@ export class CharacterDetailComponent implements OnInit {
       .catch(err=>{
         console.error("Character Details Error: ",err)
       })
-  }
+  } 
+  Edit(){
+this.show = 'visible';
+  } 
 }

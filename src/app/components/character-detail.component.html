@@ -52,4 +52,13 @@
             {{s}}
         </p>
     </mat-card-content> 
+
+    <mat-card-content>Comment: 
+            <span id ="content">Comment Text</span>
+            <button (click)="Edit()">Edit</button>
+    </mat-card-content>
+    
+    <mat-card-content>
+            <input [style.visibility]="show" type="text" placeholder="Enter comment" ngModel>  
+    </mat-card-content>
 </mat-card>
