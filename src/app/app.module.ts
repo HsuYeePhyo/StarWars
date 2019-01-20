@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ItemsComponent } from './components/items.component';
 import { CategoriesComponent } from './components/categories.component';
-import { DetailsComponent } from './components/details.component';
+import { VehicleDetailComponent } from './components/vehicle-detail.component';
 import { FilmDetailComponent } from './components/film-detail.component';
 import { CharacterDetailComponent } from './components/character-detail.component';
 
@@ -18,7 +18,7 @@ import { CharacterDetailComponent } from './components/character-detail.componen
     AppComponent,
     ItemsComponent,
     CategoriesComponent,
-    DetailsComponent,
+    VehicleDetailComponent,
     FilmDetailComponent,
     CharacterDetailComponent
   ],

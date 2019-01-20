@@ -24,6 +24,7 @@ export class CharacterDetailComponent implements OnInit {
     this.starWarSvc.getDetails(items,this.id)
       .then((result)=>{
         this.character = result; 
+        console.log(result);
         this.getHomeWorld(result["homeworld"]);   
       })
       .catch(err=>{
@@ -32,8 +33,7 @@ export class CharacterDetailComponent implements OnInit {
   }
 
   //get Planet name from url of API
-  getHomeWorld(url: string){   
-    let home = "" ;
+  getHomeWorld(url: string){  
     this.http.get(url)
       .toPromise()
       .then(result=>{

@@ -1,0 +1,42 @@
+<mat-card class="card">
+
+  <img mat-card-image src="assets/images/vehicles/{{id}}.jpg"> 
+
+<mat-card-title id="title">{{vehicle?.name.toUpperCase()}}</mat-card-title>
+
+<mat-card-content>Model: 
+    <span id ="content">{{vehicle?.model}}</span></mat-card-content>
+
+<mat-card-content>Manufacturer: 
+  <span id ="content">{{vehicle?.manufacturer.toUpperCase()}}</span></mat-card-content>
+
+<mat-card-content>Cost in Credits: 
+    <span id ="content">{{vehicle?.cost_in_credits}} </span></mat-card-content>
+
+<mat-card-content>Vehicle Length: 
+    <span id ="content">{{vehicle?.length}} </span></mat-card-content>
+
+<mat-card-content>Max Atmosphering Speed:
+    <span id ="content">{{vehicle?.max_atmosphering_speed}}</span> </mat-card-content>
+
+<mat-card-content>Crew Quantity:
+    <span id ="content">{{vehicle?.crew}}</span> </mat-card-content>
+
+<mat-card-content>Passengers Quantity: 
+    <span id ="content">{{vehicle?.passengers}}</span> </mat-card-content>
+
+<mat-card-content>Cargo Capacity:
+    <span id ="content">{{vehicle?.cargo_capacity}}</span> </mat-card-content>
+
+<mat-card-content>Consumables:
+    <span id ="content">{{vehicle?.consumables}}</span> </mat-card-content>
+
+<mat-card-content>Vehicle Class:
+    <span id ="content">{{vehicle?.vehicle_class.toUpperCase()}}</span> </mat-card-content>
+
+<mat-card-content >Pilots:
+  <p id ="content" *ngFor= "let p of vehicle?.pilots" class="tab">
+     {{p}}
+  </p>
+    </mat-card-content>
+</mat-card>

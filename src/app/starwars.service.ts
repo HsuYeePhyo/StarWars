@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams} from '@angular/common/http';
-import {Items, Characters, Films, Species, Starships, Vehicles, Planets} from './interface';
+import { HttpClient } from '@angular/common/http';
+import { Items } from './interface';
 
 
 export const URL = "https://swapi.co/api/";

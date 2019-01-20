@@ -58,7 +58,7 @@ export interface Vehicles{
     cargo_capacity: number;
     consumables: string;
     vehicle_class: string;
-    pilots?: string;
+    pilots: Array<string>;
 }
 export class Starships{
     name: string;

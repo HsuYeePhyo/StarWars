@@ -2,19 +2,20 @@
 
     <img mat-card-image src="assets/images/films/{{id}}.jpg"> 
 
-  <mat-card-title id="title">{{film?.title}}</mat-card-title>
-  <mat-card-subtitle id="subtitle">Episode ID:</mat-card-subtitle>
-  <mat-card-content>{{film?.episode_id}} </mat-card-content>
+  <mat-card-title id="title">{{film?.title.toUpperCase()}}</mat-card-title>
 
-  <mat-card-subtitle id="subtitle">Opening Crawl:</mat-card-subtitle>
-  <mat-card-content> {{film?.opening_crawl}} </mat-card-content>
+  <mat-card-content>Episode ID:
+      <span id ="content">{{film?.episode_id}}</span> </mat-card-content>
 
-  <mat-card-subtitle id="subtitle">Director:</mat-card-subtitle>
-  <mat-card-content>{{film?.director}} </mat-card-content>
+  <mat-card-content>Opening Crawl:
+      <p id ="content" class="tab"> {{film?.opening_crawl}}</p> </mat-card-content>
 
-  <mat-card-subtitle id="subtitle">Producer: </mat-card-subtitle>
-  <mat-card-content>{{film?.producer}} </mat-card-content>
+  <mat-card-content>Director: 
+      <span id ="content">{{film?.director}} </span></mat-card-content>
 
-  <mat-card-subtitle id="subtitle">Release Date: </mat-card-subtitle>
-  <mat-card-content>{{film?.release_date}} </mat-card-content>
+  <mat-card-content>Producer: 
+      <span id ="content">{{film?.producer}}</span> </mat-card-content>
+
+  <mat-card-content>Release Date:
+      <span id ="content">{{film?.release_date}}</span> </mat-card-content>
 </mat-card>
