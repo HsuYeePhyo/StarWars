@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { StarWarsSvc } from '../starwars.service';
 import { Characters } from '../interface';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-character-detail',
   templateUrl: './character-detail.component.html',
   styleUrls: ['./character-detail.component.css']
 })
-export class CharacterDetailComponent implements OnInit {
 
+export class CharacterDetailComponent implements OnInit {
+ 
   constructor(private starWarSvc: StarWarsSvc, private activatedRoute: ActivatedRoute,
     private http: HttpClient) { }
   

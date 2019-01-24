@@ -1,5 +1,4 @@
 
-
 <mat-card class="card">
     <img mat-card-image src="assets/images/characters/{{id}}.jpg"> 
 
@@ -54,11 +53,16 @@
     </mat-card-content> 
 
     <mat-card-content>Comment: 
-            <span id ="content">Comment Text</span>
-            <button (click)="Edit()">Edit</button>
+            <span id ="content" style="margin-right: 20px">Comment Text</span>
+            <button (click)="Edit()" *ngIf="show ==='hidden'">Edit</button>
     </mat-card-content>
     
-    <mat-card-content>
-            <input [style.visibility]="show" type="text" placeholder="Enter comment" ngModel>  
+    <mat-card-content [style.visibility]="show" class="tab">
+        <textarea matInput  cols="100"  placeholder="Enter comment" style="margin-bottom: 30px" ngModel></textarea>
+        
+        <tr style="position: absolute; right: 0">
+            <td><button class="button" type="submit" >Save</button></td>
+            <td><button class="button" type="reset">Cancel</button></td>            
+        </tr>
     </mat-card-content>
 </mat-card>
