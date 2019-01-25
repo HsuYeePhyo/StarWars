@@ -1,7 +1,6 @@
 
-<mat-card class="card">
   <mat-card-title class="title" id="text-center">{{items[0]?.category}}</mat-card-title>  
-</mat-card>
+
 
 <mat-card *ngFor="let i of items" class="card" (click)="chooseItem(i)">  
     <mat-card-title id="text-center">{{i.name}}</mat-card-title>          
