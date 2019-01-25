@@ -72,8 +72,8 @@ export class CharacterDetailComponent implements OnInit {
 this.show = 'visible';
   } 
   Cancel(){
-    this.show = 'hidden';    
-  }
+    this.show = 'hidden';  
+    }
   saveComment(name: string){    
     this.charDexie.name = name;
     this.charDexie.comment = this.form.value['comment'];
