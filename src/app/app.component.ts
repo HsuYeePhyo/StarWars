@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,18 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  constructor (private location: Location, private router: Router){}
+
+  // ngOnInit(){
+  //   //to redirect other invalid routes because this component does not have content 
+  //   this.router.navigate(['']);  
+  // }
+
+  goBack(){
+    if(this.location.path() != this.router.url){
+     this.router.navigate(['']);
+    }
+    else
+    this.location.back();
+  }
 }

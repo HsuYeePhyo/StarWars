@@ -16,10 +16,10 @@ const ROUTES = [
     {path:"Characters/:id", component: CharacterDetailComponent},
     {path:"Species/:id", component: SpeciesDetailComponent},
     {path:"Starships/:id", component: StarshipDetailComponent},
-    {path:"Planets/:id", component: PlanetDetailComponent}
-    //error for catch all route >> to f/u
-    // {path:"*", component: CategoriesComponent},
-    // { path: "**", redirecTo: '', pathMatch: 'full' }
+    {path:"Planets/:id", component: PlanetDetailComponent},
+    {path:"Vehicles/:id", component: VehicleDetailComponent},
+    {path:"*", component: CategoriesComponent},
+   { path: "**", redirectTo: "", pathMatch: 'full' }
 ];
 @NgModule({
     imports: [ RouterModule.forRoot(ROUTES)],
