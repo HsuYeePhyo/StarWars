@@ -18,6 +18,11 @@ export interface Characters{
     species: Array<string>;
     vehicles: Array<string>;
     starships: Array<string>;
+    comment: string;
+}
+export interface CharDexie{
+    name: string;
+    comment: string;
 }
 export interface Films{
     title: string;

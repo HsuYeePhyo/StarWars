@@ -4,6 +4,7 @@ import { MaterialModule } from './material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRouteModule } from './approute.module';
 import { StarWarsSvc } from './starwars.service';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +16,7 @@ import { CharacterDetailComponent } from './components/character-detail.componen
 import { SpeciesDetailComponent } from './components/species-detail.component';
 import { StarshipDetailComponent } from './components/starship-detail.component';
 import { PlanetDetailComponent } from './components/planet-detail.component';
+import { characterSvc } from './character.service';
 
 @NgModule({
   declarations: [
@@ -31,9 +33,9 @@ import { PlanetDetailComponent } from './components/planet-detail.component';
   imports: [
     BrowserModule,    BrowserAnimationsModule,
     MaterialModule,   HttpClientModule,
-    AppRouteModule
+    AppRouteModule,   FormsModule
   ],
-  providers: [ StarWarsSvc ],
+  providers: [ StarWarsSvc, characterSvc ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
