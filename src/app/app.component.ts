@@ -11,10 +11,10 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor (private location: Location, private router: Router){}
 
-  ngOnInit(){
-    //to redirect other invalid routes because this component does not have content 
-    this.router.navigate(['']);  
-  }
+   ngOnInit(){
+  // ]  //to redirect other invalid routes because this component does not have content 
+     this.router.navigate(['']);  
+   }
 
 
   goBack(){
