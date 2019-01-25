@@ -66,6 +66,8 @@ export class CharacterDetailComponent implements OnInit {
         console.error("Character Details Error: ",err)
       })  
     } 
+
+    //show and hide text area for comment
   Edit(){
 this.show = 'visible';
   } 
