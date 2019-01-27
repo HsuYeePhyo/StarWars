@@ -22,7 +22,6 @@ export class FilmDetailComponent implements OnInit {
       .then(result =>{
           this.film = result;
           this.film.characters = this.starWarSvc.getPeopleNames(result.characters);
-          console.log(this.film.characters);
       })
       .catch(err=>{
           console.error(">>>Film Details Error: ", err);
