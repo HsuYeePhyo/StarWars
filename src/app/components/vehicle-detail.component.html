@@ -2,47 +2,47 @@
 
   <img mat-card-image src="assets/images/vehicles/{{id}}.jpg"> 
 
-<mat-card-title id="title">{{vehicle?.name.toUpperCase()}}</mat-card-title>
+<mat-card-content id="title">{{vehicle?.name.toUpperCase()}}</mat-card-content>
 
-<mat-card-content>Model: 
+<mat-card-content id="label">Model: 
     <span id ="content">{{vehicle?.model}}</span></mat-card-content>
 
-<mat-card-content>Manufacturer: 
+<mat-card-content id="label">Manufacturer: 
   <span id ="content">{{vehicle?.manufacturer.toUpperCase()}}</span></mat-card-content>
 
-<mat-card-content>Cost in Credits: 
+<mat-card-content id="label">Cost in Credits: 
     <span id ="content">{{vehicle?.cost_in_credits}} </span></mat-card-content>
 
-<mat-card-content>Vehicle Length: 
+<mat-card-content id="label">Vehicle Length: 
     <span id ="content">{{vehicle?.length}} </span></mat-card-content>
 
-<mat-card-content>Max Atmosphering Speed:
+<mat-card-content id="label">Max Atmosphering Speed:
     <span id ="content">{{vehicle?.max_atmosphering_speed}}</span> </mat-card-content>
 
-<mat-card-content>Crew Quantity:
+<mat-card-content id="label">Crew Quantity:
     <span id ="content">{{vehicle?.crew}}</span> </mat-card-content>
 
-<mat-card-content>Passengers Quantity: 
+<mat-card-content id="label">Passengers Quantity: 
     <span id ="content">{{vehicle?.passengers}}</span> </mat-card-content>
 
-<mat-card-content>Cargo Capacity:
+<mat-card-content id="label">Cargo Capacity:
     <span id ="content">{{vehicle?.cargo_capacity}}</span> </mat-card-content>
 
-<mat-card-content>Consumables:
+<mat-card-content id="label">Consumables:
     <span id ="content">{{vehicle?.consumables}}</span> </mat-card-content>
 
-<mat-card-content>Vehicle Class:
+<mat-card-content id="label">Vehicle Class:
     <span id ="content">{{vehicle?.vehicle_class.toUpperCase()}}</span> </mat-card-content>
 
-<mat-card-content >Pilots:
-  <p id ="content" *ngFor= "let p of vehicle?.pilots" class="tab">
-     {{p}}
-  </p>
+<mat-card-content id="label">Pilots:
+  <span id ="content" *ngFor= "let p of vehicle?.pilots">
+     "{{p}}"
+  </span>
     </mat-card-content>
 
-    <mat-card-content >Films:
-            <p id ="content" *ngFor= "let f of vehicle?.fimls" class="tab">
-                {{f}}
-            </p>
+    <mat-card-content id="label">Films:
+            <span id ="content" *ngFor= "let f of vehicle?.fimls">
+                "{{f}}"
+            </span>
           </mat-card-content>
 </mat-card>

@@ -17,6 +17,7 @@ export class CategoriesComponent implements OnInit {
   }
   category =  categories;
   
+  //direct to category's items list
   chooseCategory(c: string){
       this.router.navigate(['',c]); 
   }

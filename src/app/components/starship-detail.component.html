@@ -2,53 +2,53 @@
 
     <img mat-card-image src="assets/images/starships/{{id}}.jpg"> 
   
-  <mat-card-title id="title">{{starship?.name.toUpperCase()}}</mat-card-title>
+  <mat-card-content id="title">{{starship?.name.toUpperCase()}}</mat-card-content>
   
-  <mat-card-content>Model: 
+  <mat-card-content id="label">Model: 
       <span id ="content">{{starship?.model}}</span></mat-card-content>
   
-  <mat-card-content>Manufacturer: 
+  <mat-card-content id="label">Manufacturer: 
     <span id ="content">{{starship?.manufacturer.toUpperCase()}}</span></mat-card-content>
   
-  <mat-card-content>Cost in Credits: 
+  <mat-card-content id="label">Cost in Credits: 
       <span id ="content">{{starship?.cost_in_credits}} </span></mat-card-content>
   
-  <mat-card-content>Vehicle Length: 
+  <mat-card-content id="label">Vehicle Length: 
       <span id ="content">{{starship?.length}} </span></mat-card-content>
   
-  <mat-card-content>Max Atmosphering Speed:
+  <mat-card-content id="label">Max Atmosphering Speed:
       <span id ="content">{{starship?.max_atmosphering_speed}}</span> </mat-card-content>
   
-  <mat-card-content>Crew Quantity:
+  <mat-card-content id="label">Crew Quantity:
       <span id ="content">{{starship?.crew}}</span> </mat-card-content>
   
-  <mat-card-content>Passengers Quantity: 
+  <mat-card-content id="label">Passengers Quantity: 
       <span id ="content">{{starship?.passengers}}</span> </mat-card-content>
   
-  <mat-card-content>Cargo Capacity:
+  <mat-card-content id="label">Cargo Capacity:
       <span id ="content">{{starship?.cargo_capacity}}</span> </mat-card-content>
   
-  <mat-card-content>Consumables:
+  <mat-card-content id="label">Consumables:
       <span id ="content">{{starship?.consumables}}</span> </mat-card-content>
 
-  <mat-card-content>Hyperdrive Rating:
+  <mat-card-content id="label">Hyperdrive Rating:
       <span id ="content">{{starship?.hyperdrive_rating}}</span> </mat-card-content>   
       
-  <mat-card-content>MGLT:
+  <mat-card-content id="label">MGLT:
       <span id ="content">{{starship?.MGLT}}</span> </mat-card-content>
   
-  <mat-card-content>Starship Class:
+  <mat-card-content id="label">Starship Class:
       <span id ="content">{{starship?.starship_class.toUpperCase()}}</span> </mat-card-content>
   
-  <mat-card-content >Pilots:
-    <p id ="content" *ngFor= "let p of pilot" class="tab">
-       {{p}}
-    </p>
+  <mat-card-content id="label">Pilots:
+    <span id ="content" *ngFor= "let p of pilot">
+       "{{p}}"
+    </span>
     </mat-card-content>
 
-  <mat-card-content >Films:
-    <p id ="content" *ngFor= "let f of film" class="tab">
-        {{f}}
-    </p>
+  <mat-card-content id="label">Films:
+    <span id ="content" *ngFor= "let f of film">
+        "{{f}}"
+    </span>
   </mat-card-content>
 </mat-card>

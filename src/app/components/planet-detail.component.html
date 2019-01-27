@@ -2,41 +2,41 @@
 
     <img mat-card-image src="assets/images/planets/{{id}}.jpg"> 
   
-  <mat-card-title id="title">{{planet?.name.toUpperCase()}}</mat-card-title>
+  <mat-card-content id="title">{{planet?.name.toUpperCase()}}</mat-card-content>
   
-  <mat-card-content>Rotation Period: 
+  <mat-card-content id="label">Rotation Period: 
       <span id ="content">{{planet?.rotation_period}}</span></mat-card-content>
   
-  <mat-card-content>Orbital Period: 
+  <mat-card-content id="label">Orbital Period: 
       <span id ="content">{{planet?.orbital_period}}</span></mat-card-content>
   
-    <mat-card-content>Diameter: 
+    <mat-card-content id="label">Diameter: 
       <span id ="content">{{planet?.diameter}}</span></mat-card-content>
   
-    <mat-card-content>Climate: 
+    <mat-card-content id="label">Climate: 
       <span id ="content">{{planet?.climate}}</span></mat-card-content>
   
-  <mat-card-content>Gravity:
+  <mat-card-content id="label">Gravity:
       <span id ="content">{{planet?.gravity}}</span> </mat-card-content>
   
-  <mat-card-content>Terrain:
+  <mat-card-content id="label">Terrain:
     <span id ="content">{{planet?.terrain}}</span> </mat-card-content>
 
-  <mat-card-content>Surface Water:
+  <mat-card-content id="label">Surface Water:
     <span id ="content">{{planet?.surface_water}}</span> </mat-card-content>
 
-  <mat-card-content>Populatition:
+  <mat-card-content id="label">Populatition:
     <span id ="content">{{planet?.population}}</span> </mat-card-content>
   
-  <mat-card-content >Residents:
-    <p id ="content" *ngFor= "let r of planet?.residents" class="tab">
-       {{r}}
-    </p>
+  <mat-card-content id="label">Residents:
+    <span id ="content" *ngFor= "let r of planet?.residents">
+       "{{r}}"
+    </span>
       </mat-card-content>
 
-      <mat-card-content >Films:
-          <p id ="content" *ngFor= "let f of planet?.films" class="tab">
-             {{f}}
-          </p>
+      <mat-card-content id="label">Films:
+          <span id ="content" *ngFor= "let f of planet?.films">
+             "{{f}}"
+          </span>
             </mat-card-content>      
   </mat-card>

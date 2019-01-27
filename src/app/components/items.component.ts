@@ -29,9 +29,8 @@ export class ItemsComponent implements OnInit {
 
   chooseItem(i: Items){
     //get id for image
-    let id = (i.url.slice((URL+i.catUrl).length, i.url.length-1).replace('/',''));   
-    
-    console.log("ID after split: ", id);
+    //remove base url + category para + '/' and last '/' from url
+    let id = (i.url.slice((URL+i.catUrl).length, i.url.length-1).replace('/',''));  
     this.router.navigate(['',i.category,id]);
   }
 }

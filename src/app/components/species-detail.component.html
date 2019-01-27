@@ -2,44 +2,44 @@
 
     <img mat-card-image src="assets/images/species/{{id}}.jpg"> 
   
-  <mat-card-title id="title">{{species?.name.toUpperCase()}}</mat-card-title>
+  <mat-card-content id="title">{{species?.name.toUpperCase()}}</mat-card-content>
   
-  <mat-card-content>Classification: 
+  <mat-card-content id="label">Classification: 
       <span id ="content">{{species?.classification.toUpperCase()}}</span></mat-card-content>
   
-      <mat-card-content>Designation: 
+      <mat-card-content id="label">Designation: 
           <span id ="content">{{species?.designation}}</span></mat-card-content>
 
-      <mat-card-content>Average Height: 
+      <mat-card-content id="label">Average Height: 
         <span id ="content">{{species?.average_height}}</span></mat-card-content>
 
-      <mat-card-content>Skin Colors: 
+      <mat-card-content id="label">Skin Colors: 
         <span id ="content">{{species?.skin_colors}}</span></mat-card-content>
 
-      <mat-card-content>Hair Colors: 
+      <mat-card-content id="label">Hair Colors: 
         <span id ="content">{{species?.hair_colors}}</span></mat-card-content>
 
-      <mat-card-content>Eye Colors: 
+      <mat-card-content id="label">Eye Colors: 
         <span id ="content">{{species?.eye_colors}}</span></mat-card-content>
 
-      <mat-card-content>Average Lifespan: 
+      <mat-card-content id="label">Average Lifespan: 
         <span id ="content">{{species?.average_lifespan}}</span></mat-card-content>
 
-      <mat-card-content>Home World: 
+      <mat-card-content id="label">Home World: 
         <span id ="content">{{species?.homeworld}}</span></mat-card-content>
 
-      <mat-card-content>Language: 
+      <mat-card-content id="label">Language: 
         <span id ="content">{{species?.language}}</span></mat-card-content>
 
-      <mat-card-content >People:
-            <p id ="content" *ngFor= "let p of species?.people" class="tab">
-               {{p}}
-            </p>
+      <mat-card-content id="label">People:
+            <span id ="content" *ngFor= "let p of species?.people">
+               "{{p}}"
+            </span>
       </mat-card-content>
 
-      <mat-card-content >Films:
-          <p id ="content" *ngFor= "let f of species?.films" class="tab">
-             {{f}}
-          </p>
+      <mat-card-content id="label">Films:
+          <span id ="content" *ngFor= "let f of species?.films">
+             "{{f}}"
+          </span>
             </mat-card-content>   
 </mat-card>

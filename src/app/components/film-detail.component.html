@@ -2,26 +2,26 @@
 
     <img mat-card-image src="assets/images/films/{{id}}.jpg"> 
 
-  <mat-card-title id="title">{{film?.title.toUpperCase()}}</mat-card-title>
+  <mat-card-content id="title">{{film?.title.toUpperCase()}}</mat-card-content>
 
-  <mat-card-content>Episode ID:
+  <mat-card-content id="label">Episode ID:
       <span id ="content">{{film?.episode_id}}</span> </mat-card-content>
 
-  <mat-card-content>Opening Crawl:
-      <p id ="content" class="tab"> {{film?.opening_crawl}}</p> </mat-card-content>
+  <mat-card-content id="label">Opening Crawl:
+      <span id ="content" style="font-weight: normal"> {{film?.opening_crawl}}</span> </mat-card-content>
 
-  <mat-card-content>Director: 
+  <mat-card-content id="label">Director: 
       <span id ="content">{{film?.director}} </span></mat-card-content>
 
-  <mat-card-content>Producer: 
+  <mat-card-content id="label">Producer: 
       <span id ="content">{{film?.producer}}</span> </mat-card-content>
 
-  <mat-card-content>Release Date:
+  <mat-card-content id="label">Release Date:
       <span id ="content">{{film?.release_date}}</span> </mat-card-content>
 
-<mat-card-content >Characters:
-        <p id ="content" *ngFor= "let c of film?.characters" class="tab">
-           {{c}}
-        </p>
+<mat-card-content id="label">Characters:
+        <span id ="content" *ngFor= "let c of film?.characters" >
+           "{{c}}"
+        </span>
           </mat-card-content>   
  </mat-card>

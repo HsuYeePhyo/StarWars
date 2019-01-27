@@ -23,6 +23,8 @@ export class PlanetDetailComponent implements OnInit {
     this.starWarSvc.getDetails(item,this.id)
         .then(result=>{
           this.planet = result;
+          
+          //Get names from api url
           if (result.residents != null || result.residents != []){
             this.planet.residents = this.starWarSvc.getPeopleNames(result.residents);
           }   

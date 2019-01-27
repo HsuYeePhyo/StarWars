@@ -66,7 +66,7 @@ export class CharacterDetailComponent implements OnInit {
         console.error("Character Details Error: ",err)
       })  
     } 
-
+    
     //show and hide text area for comment
   Edit(){
 this.show = 'visible';
@@ -79,6 +79,7 @@ this.show = 'visible';
     this.charDexie.comment = this.form.value['comment'];
     this.commentDexie.saveComment(this.charDexie)
       .then(()=>{
+        this.show = 'hidden';
         this.form.reset();
         
         //display saved comment

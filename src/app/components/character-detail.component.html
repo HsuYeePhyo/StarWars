@@ -1,64 +1,63 @@
 
     <mat-card class="card">
         <img mat-card-image src="assets/images/characters/{{id}}.jpg"> 
-        <tr name="name">
-    <mat-card-title id="title">{{character?.name.toUpperCase()}}</mat-card-title>
-</tr>
-    <mat-card-content>Height:
+    <mat-card-content id="title">{{character?.name.toUpperCase()}}</mat-card-content>
+
+    <mat-card-content id="label">Height:
         <span id ="content" >{{character?.height}} </span></mat-card-content>
 
-    <mat-card-content>Mass:
+    <mat-card-content id="label">Mass:
         <span id ="content" > {{character?.mass}}</span> </mat-card-content>
 
-    <mat-card-content>Hair Color: 
+    <mat-card-content id="label">Hair Color: 
         <span id ="content" >{{character?.hair_color}}</span> </mat-card-content>
 
-    <mat-card-content>Skin Color: 
+    <mat-card-content id="label">Skin Color: 
         <span id ="content" >{{character?.skin_color}} </span></mat-card-content>
 
-    <mat-card-content>Eye Color:
+    <mat-card-content id="label">Eye Color:
         <span id ="content">{{character?.eye_color}} </span></mat-card-content>
 
-    <mat-card-content>Birth Year:
+    <mat-card-content id="label">Birth Year:
         <span id ="content">{{character?.birth_year}} </span></mat-card-content>
 
-    <mat-card-content>Gender: 
+    <mat-card-content id="label">Gender: 
         <span id ="content">{{character?.gender}} </span></mat-card-content>
 
-    <mat-card-content>Home World: 
+    <mat-card-content id="label">Home World: 
         <span id ="content">{{character?.homeworld}}</span></mat-card-content>
 
-        <mat-card-content >Films:
-            <p id ="content" *ngFor= "let f of character?.films" class="tab" name="films">
-                {{f}}
-            </p>
+        <mat-card-content id="label">Films:
+            <span id ="content" *ngFor= "let f of character?.films">
+                "{{f}}"
+            </span>
         </mat-card-content>  
         
-        <mat-card-content >Species:
-            <p id ="content" *ngFor= "let s of character?.species" class="tab" name="species">
-                {{s}}
-            </p>
+        <mat-card-content id="label">Species:
+            <span id ="content" *ngFor= "let s of character?.species">
+                "{{s}}"
+            </span>
         </mat-card-content>  
 
-        <mat-card-content >Vehicles:
-            <p id ="content" *ngFor= "let v of character?.vehicles" class="tab" name="vehicles">
-                {{v}}
-            </p>
+        <mat-card-content id="label">Vehicles:
+            <span id ="content" *ngFor= "let v of character?.vehicles">
+                "{{v}}"
+            </span>
         </mat-card-content> 
 
-        <mat-card-content >Starships:
-            <p id ="content" *ngFor= "let s of character?.starships" class="tab" name="starships">
-                {{s}}
-            </p>
+        <mat-card-content id="label">Starships:
+            <span id ="content" *ngFor= "let s of character?.starships">
+                "{{s}}"
+            </span>
         </mat-card-content> 
 
-        <mat-card-content>Comment: 
+        <mat-card-content id="label">Comment: 
                 <span id ="content" style="margin-right: 20px" name="comment">{{character?.comment}}</span>
                 <button (click)="Edit()" *ngIf="show ==='hidden'">Edit</button>
                 <button class="button" (click)="Cancel()" *ngIf="show != 'hidden'">Cancel</button>
         </mat-card-content>
         
-        <!-- comment field -->
+        <!-- comment input field -->
         <mat-card-content [style.visibility]="show" class="tab">
             <form #form ="ngForm" (ngSubmit)="saveComment(this.character?.name)">
                 <textarea matInput  cols="100"  placeholder="Enter comment" style="margin-bottom: 30px" 

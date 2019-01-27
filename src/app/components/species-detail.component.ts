@@ -25,6 +25,8 @@ export class SpeciesDetailComponent implements OnInit {
         .then(result=>
           {
               this.species = result;
+
+              //Get names from api url
               if(result.homeworld != null)
               {
                 this.starWarSvc.getfromAPIurl(result.homeworld)

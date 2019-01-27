@@ -11,12 +11,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   constructor (private location: Location, private router: Router){}
 
-   ngOnInit(){
-  // ]  //to redirect other invalid routes because this component does not have content 
-     this.router.navigate(['']);  
-   }
-
-
+  //go to home page
+  home(){
+    this.router.navigate(['']);
+  }
+  //for back button on toolbar
   goBack(){
     if(this.location.path() != this.router.url){
      this.router.navigate(['']);
@@ -25,6 +24,7 @@ export class AppComponent {
     this.location.back();
   }
 
+  //share on android
   share(){
     let newVariable: any;
     newVariable = window.navigator;
